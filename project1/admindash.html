@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - College Portal</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body onload="loadAdminDashboard()">
+  <header class="dash-header">
+    <h1>Admin Dashboard</h1>
+    <button class="logout-btn" onclick="logoutAdmin()">Logout</button>
+  </header>
+
+  <main class="dashboard-container">
+    <aside class="sidebar">
+      <button onclick="showSection('students')">👩‍🎓 Manage Students</button>
+      <button onclick="showSection('subjects')">📘 Manage Subjects</button>
+      <button onclick="showSection('results')">📊 Manage Results</button>
+      <button onclick="showSection('overview')">📈 Overview</button>
+    </aside>
+
+    <section class="main-content">
+      <!-- Students Section -->
+      <div id="students" class="section active">
+        <h2>Manage Students</h2>
+        <form id="studentForm" onsubmit="addStudent(event)">
+          <input type="text" id="studentName" placeholder="Student Name" required>
+          <input type="text" id="studentRoll" placeholder="Roll Number" required>
+          <input type="text" id="studentDept" placeholder="Department" required>
+          <button type="submit">Add Student</button>
+        </form>
+        <table id="studentTable">
+          <thead>

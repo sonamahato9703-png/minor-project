@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Dashboard - College Portal</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body onload="loadDashboard()">
+  <header class="dash-header">
+    <h1>Student Dashboard</h1>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </header>
+
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <h3>Welcome, <span id="studentName"></span></h3>
+      <button onclick="showSection('profile')">👤 Profile</button>
+      <button onclick="showSection('result')">📊 Result</button>
+      <button onclick="showSection('subjects')">📘 Subjects Enrolled</button>
+      <button onclick="showSection('credits')">🎓 Credit Points</button>
+      <button onclick="showSection('internal')">🧮 Internal Marks</button>
+    </aside>
+
+    <main class="main-content">
+      <!-- Profile -->
+      <section id="profile" class="content-section active">
+        <h2>Student Profile</h2>
+        <p><strong>Name:</strong> <span id="profileName"></span></p>
+        <p><strong>Roll No:</strong> <span id="profileRoll"></span></p>
+        <p><strong>Course:</strong> <span id="profileCourse"></span></p>
+        <p><strong>Year:</strong> <span id="profileYear"></span></p>
+      </section>
+
+      <!-- Result -->
+      <section id="result" class="content-section">
+        <h2>Academic Result</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Subject</th>
+              <th>Marks</th>
+              <th>Grade</th>
+            </tr>
+          </thead>
+          <tbody id="resultTable"></tbody>
+        </table>
+        <h3 id="overall"></h3>
+      </section>
+
+      <!-- Subjects -->
+      <section id="subjects" class="content-section">
+        <h2>Subjects Enrolled</h2>
+        <ul id="subjectList"></ul>
+      </section>
+
+      <!-- Credit Points -->
+      <section id="credits" class="content-section">
+        <h2>Credit Points</h2>
+        <p>Total Credit Points: <strong id="creditPoints"></strong></p>
+      </section>
+
+      <!-- Internal Marks -->
+      <section id="internal" class="content-section">
+        <h2>Internal Marks</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Subject</th>
+              <th>Internal Marks</th>
+            </tr>
+          </thead>
+          <tbody id="internalTable"></tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>© 2025 My College Portal</p>
+  </footer>
+</body>
+</html>

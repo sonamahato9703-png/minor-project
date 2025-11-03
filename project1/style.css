@@ -1,0 +1,83 @@
+/* Dashboard Layout */
+.dash-header {
+  background: #004aad;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+.logout-btn {
+  background: #ff3b3b;
+  border: none;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.logout-btn:hover {
+  background: #ff5c5c;
+}
+
+.dashboard-container {
+  display: flex;
+  min-height: 80vh;
+}
+
+.sidebar {
+  width: 250px;
+  background: #f1f5fb;
+  padding: 20px;
+  border-right: 2px solid #ddd;
+}
+
+.sidebar h3 {
+  color: #004aad;
+  margin-bottom: 15px;
+}
+
+.sidebar button {
+  width: 100%;
+  background: #004aad;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: left;
+}
+.sidebar button:hover {
+  background: #007bff;
+}
+
+.main-content {
+  flex: 1;
+  padding: 30px;
+  background: #fff;
+}
+
+.content-section {
+  display: none;
+}
+.content-section.active {
+  display: block;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+table, th, td {
+  border: 1px solid #ccc;
+}
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+th {
+  background: #004aad;
+  color: white;
+}
